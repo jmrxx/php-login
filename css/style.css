@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+.login {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.login h2 {
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.login .user-box {
+  position: relative;
+}
+
+.login .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login .user-box input:focus ~ label,
+.login .user-box input:valid ~ label {
+  top: -30px;
+  left: 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.login .btn {
+  width: 250px;
+  height: 45px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, transparent, #14654c);
+  border: none;
+  color: #fff;
+  outline: none;
+  overflow: hidden;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.modal {
+  padding: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.other{
+  padding: 20px;
+}
+
+.container .registration{
+  display: none;
+}
+
+#check:checked ~ .registration{
+  display: block;
+}
+
+#check:checked ~ .login{
+  display: none;
+}
+
+#check{
+  display: none;
+}
